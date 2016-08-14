@@ -56,6 +56,7 @@ class HomeViewController: UIViewController {
     notification.fireDate = NSDate(timeIntervalSinceNow: 10)
     notification.soundName = UILocalNotificationDefaultSoundName
     notification.userInfo = [selectedIndexKey: selectedIndex]
+    notification.category = "POKEMON_CATEGORY"
     UIApplication.sharedApplication().scheduleLocalNotification(notification)
   }
 
