@@ -56,6 +56,9 @@
                                 <state key="normal" title="Notify they are nearby">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onNotifyButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h35-X2-PfJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

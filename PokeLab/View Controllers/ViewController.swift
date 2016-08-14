@@ -16,6 +16,7 @@ class ViewController: UIViewController {
 
   var selectedIndex = 0
   var buttons: [UIButton]!
+  var pokemons = ["Pikachu", "Teropi", "Psyduck"]
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -38,6 +39,16 @@ class ViewController: UIViewController {
     default: break
     }
     updateButton()
+  }
+
+
+  @IBAction func onNotifyButtonTapped(sender: UIButton) {
+    let notification = UILocalNotification()
+    notification.alertBody = "\(pokemons[selectedIndex]) is nearby."
+    notification.fireDate = NSDate(timeIntervalSinceNow: 10)
+    notification.soundName = UILocalNotificationDefaultSoundName
+    notification.userInfo = ["selectedIndex": selectedIndex]
+    UIApplication.sharedApplication().scheduleLocalNotification(notification)
   }
 
 }
