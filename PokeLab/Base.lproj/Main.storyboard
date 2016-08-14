@@ -106,12 +106,16 @@
                                     <constraint firstAttribute="height" constant="140" id="c9G-js-iRL"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pokeball" translatesAutoresizingMaskIntoConstraints="NO" id="g4n-Vq-C6w">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pokeball" translatesAutoresizingMaskIntoConstraints="NO" id="g4n-Vq-C6w">
                                 <rect key="frame" x="125" y="448" width="70" height="70"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="g4n-Vq-C6w" secondAttribute="height" multiplier="1:1" id="9N3-Px-FtV"/>
                                     <constraint firstAttribute="height" constant="70" id="hLG-LV-F8u"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="bHO-tj-mi2" appends="YES" id="qcr-W2-o3f"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -123,10 +127,16 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="ballImageView" destination="g4n-Vq-C6w" id="0gq-wd-KR7"/>
                         <outlet property="pokemonImageView" destination="lxH-IU-WOp" id="dmE-y2-gWE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1jk-xg-P0v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="bHO-tj-mi2">
+                    <connections>
+                        <action selector="onBallPanned:" destination="TQf-oW-SvH" id="myB-LJ-erU"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="621" y="295"/>
         </scene>
