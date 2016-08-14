@@ -8,6 +8,8 @@
 
 import UIKit
 
+let pokemons = ["Pikachu", "Togepi", "Psyduck"]
+
 class HomeViewController: UIViewController {
 
   @IBOutlet weak var firstButton: UIButton!
@@ -16,7 +18,6 @@ class HomeViewController: UIViewController {
 
   var selectedIndex = 0
   var buttons: [UIButton]!
-  var pokemons = ["Pikachu", "Teropi", "Psyduck"]
 
   override func viewDidLoad() {
     super.viewDidLoad()

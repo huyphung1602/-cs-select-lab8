@@ -87,9 +87,53 @@
             </objects>
             <point key="canvasLocation" x="200" y="295"/>
         </scene>
+        <!--Catch View Controller-->
+        <scene sceneID="0Wi-eH-sG0">
+            <objects>
+                <viewController storyboardIdentifier="CatchViewController" id="TQf-oW-SvH" customClass="CatchViewController" customModule="PokeLab" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NtE-1W-4bp"/>
+                        <viewControllerLayoutGuide type="bottom" id="maL-aU-Khb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="G1Z-u6-Sag">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pikachu" translatesAutoresizingMaskIntoConstraints="NO" id="lxH-IU-WOp">
+                                <rect key="frame" x="90" y="120" width="140" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="lxH-IU-WOp" secondAttribute="height" id="ZRd-Lz-Cx3"/>
+                                    <constraint firstAttribute="height" constant="140" id="c9G-js-iRL"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pokeball" translatesAutoresizingMaskIntoConstraints="NO" id="g4n-Vq-C6w">
+                                <rect key="frame" x="125" y="448" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="g4n-Vq-C6w" secondAttribute="height" multiplier="1:1" id="9N3-Px-FtV"/>
+                                    <constraint firstAttribute="height" constant="70" id="hLG-LV-F8u"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="maL-aU-Khb" firstAttribute="top" secondItem="g4n-Vq-C6w" secondAttribute="bottom" constant="50" id="E15-OZ-bpb"/>
+                            <constraint firstItem="g4n-Vq-C6w" firstAttribute="centerX" secondItem="G1Z-u6-Sag" secondAttribute="centerX" id="YsK-Zj-iQ1"/>
+                            <constraint firstItem="lxH-IU-WOp" firstAttribute="centerX" secondItem="G1Z-u6-Sag" secondAttribute="centerX" id="nYv-Df-dxs"/>
+                            <constraint firstItem="lxH-IU-WOp" firstAttribute="top" secondItem="NtE-1W-4bp" secondAttribute="bottom" constant="100" id="vQ6-bV-ohh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pokemonImageView" destination="lxH-IU-WOp" id="dmE-y2-gWE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1jk-xg-P0v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="621" y="295"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Pikachu" width="187" height="166"/>
+        <image name="Pokeball" width="143" height="143"/>
         <image name="Psyduck" width="320" height="449"/>
         <image name="Togepi" width="125" height="125"/>
     </resources>

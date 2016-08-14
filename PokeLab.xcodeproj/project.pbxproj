@@ -13,6 +13,7 @@
 		A54A54261D60B517000E484C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A54A54241D60B517000E484C /* LaunchScreen.storyboard */; };
 		A54A54301D60BC7C000E484C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54A542F1D60BC7C000E484C /* HomeViewController.swift */; };
 		A54A54321D60BC8E000E484C /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54A54311D60BC8E000E484C /* UIButton+Extension.swift */; };
+		A54A54341D60C9D4000E484C /* CatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54A54331D60C9D4000E484C /* CatchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A54A54271D60B517000E484C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A54A542F1D60BC7C000E484C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A54A54311D60BC8E000E484C /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		A54A54331D60C9D4000E484C /* CatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				A54A542F1D60BC7C000E484C /* HomeViewController.swift */,
+				A54A54331D60C9D4000E484C /* CatchViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			files = (
 				A54A54301D60BC7C000E484C /* HomeViewController.swift in Sources */,
 				A54A541C1D60B517000E484C /* AppDelegate.swift in Sources */,
+				A54A54341D60C9D4000E484C /* CatchViewController.swift in Sources */,
 				A54A54321D60BC8E000E484C /* UIButton+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

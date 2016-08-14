@@ -44,5 +44,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
   }
 
+  func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+    if let selectedIndex = notification.userInfo!["selectedIndex"] as? Int {
+      if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("CatchViewController") as? CatchViewController {
+        vc.selectedIndex = selectedIndex
+        window?.rootViewController?.presentViewController(vc, animated: true, completion: nil)
+      }
+    }
+  }
 
 }
