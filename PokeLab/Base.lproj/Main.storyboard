@@ -1,25 +1,93 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PokeLab" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yp1-aE-cvb">
+                                <rect key="frame" x="20" y="100" width="80" height="80"/>
+                                <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                <state key="normal" image="Pikachu"/>
+                                <connections>
+                                    <action selector="onPokemonButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XGe-xB-0Uu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vlw-t2-apI">
+                                <rect key="frame" x="120" y="100" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vlw-t2-apI" secondAttribute="height" id="HaU-jF-C3h"/>
+                                    <constraint firstAttribute="width" constant="80" id="ocJ-Sa-Qfd"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                <state key="normal" image="Togepi"/>
+                                <connections>
+                                    <action selector="onPokemonButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dc6-ph-ens"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9IN-WV-Eoc">
+                                <rect key="frame" x="220" y="100" width="80" height="80"/>
+                                <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                <state key="normal" image="Psyduck"/>
+                                <connections>
+                                    <action selector="onPokemonButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kuo-SM-Rko"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKc-4q-YFe">
+                                <rect key="frame" x="70" y="261.5" width="180" height="45"/>
+                                <color key="backgroundColor" red="0.031372549020000001" green="0.41176470590000003" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="Ujz-Yu-8aY"/>
+                                    <constraint firstAttribute="height" constant="45" id="jfG-Ux-wk8"/>
+                                </constraints>
+                                <state key="normal" title="Notify they are nearby">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Yp1-aE-cvb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="51D-OE-2Sc"/>
+                            <constraint firstItem="9IN-WV-Eoc" firstAttribute="centerY" secondItem="vlw-t2-apI" secondAttribute="centerY" id="7pK-eu-S8b"/>
+                            <constraint firstItem="vlw-t2-apI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="9gF-kg-mGB"/>
+                            <constraint firstItem="yKc-4q-YFe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="AOd-1Z-Vez"/>
+                            <constraint firstItem="vlw-t2-apI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PK9-lg-erd"/>
+                            <constraint firstItem="yKc-4q-YFe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QbV-B1-CAu"/>
+                            <constraint firstItem="vlw-t2-apI" firstAttribute="height" secondItem="Yp1-aE-cvb" secondAttribute="height" id="XFu-Ys-Khj"/>
+                            <constraint firstItem="9IN-WV-Eoc" firstAttribute="height" secondItem="Yp1-aE-cvb" secondAttribute="height" id="XgZ-NG-dkD"/>
+                            <constraint firstAttribute="trailing" secondItem="9IN-WV-Eoc" secondAttribute="trailing" constant="20" id="bn4-cM-ouz"/>
+                            <constraint firstItem="Yp1-aE-cvb" firstAttribute="centerY" secondItem="vlw-t2-apI" secondAttribute="centerY" id="cOX-We-FWK"/>
+                            <constraint firstItem="9IN-WV-Eoc" firstAttribute="width" secondItem="Yp1-aE-cvb" secondAttribute="width" id="lZA-FJ-FYn"/>
+                            <constraint firstItem="vlw-t2-apI" firstAttribute="width" secondItem="Yp1-aE-cvb" secondAttribute="width" id="w9G-Bu-FBI"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="firstButton" destination="Yp1-aE-cvb" id="ouP-tu-kYt"/>
+                        <outlet property="secondButton" destination="vlw-t2-apI" id="3dt-c1-tnA"/>
+                        <outlet property="thirdButton" destination="9IN-WV-Eoc" id="sWu-I8-Z5j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="200" y="295"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Pikachu" width="187" height="166"/>
+        <image name="Psyduck" width="320" height="449"/>
+        <image name="Togepi" width="125" height="125"/>
+    </resources>
 </document>

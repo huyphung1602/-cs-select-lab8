@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		A54A541C1D60B517000E484C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54A541B1D60B517000E484C /* AppDelegate.swift */; };
-		A54A541E1D60B517000E484C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54A541D1D60B517000E484C /* ViewController.swift */; };
 		A54A54211D60B517000E484C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A54A541F1D60B517000E484C /* Main.storyboard */; };
 		A54A54231D60B517000E484C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A54A54221D60B517000E484C /* Assets.xcassets */; };
 		A54A54261D60B517000E484C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A54A54241D60B517000E484C /* LaunchScreen.storyboard */; };
+		A54A54301D60BC7C000E484C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54A542F1D60BC7C000E484C /* ViewController.swift */; };
+		A54A54321D60BC8E000E484C /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54A54311D60BC8E000E484C /* UIButton+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A54A54181D60B517000E484C /* PokeLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A54A541B1D60B517000E484C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A54A541D1D60B517000E484C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A54A54201D60B517000E484C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A54A54221D60B517000E484C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A54A54251D60B517000E484C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A54A54271D60B517000E484C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A54A542F1D60BC7C000E484C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A54A54311D60BC8E000E484C /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,31 @@
 		A54A541A1D60B517000E484C /* PokeLab */ = {
 			isa = PBXGroup;
 			children = (
+				A54A542D1D60BC7C000E484C /* Extensions */,
+				A54A542E1D60BC7C000E484C /* View Controllers */,
 				A54A541B1D60B517000E484C /* AppDelegate.swift */,
-				A54A541D1D60B517000E484C /* ViewController.swift */,
 				A54A541F1D60B517000E484C /* Main.storyboard */,
 				A54A54221D60B517000E484C /* Assets.xcassets */,
 				A54A54241D60B517000E484C /* LaunchScreen.storyboard */,
 				A54A54271D60B517000E484C /* Info.plist */,
 			);
 			path = PokeLab;
+			sourceTree = "<group>";
+		};
+		A54A542D1D60BC7C000E484C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A54A54311D60BC8E000E484C /* UIButton+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A54A542E1D60BC7C000E484C /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A54A542F1D60BC7C000E484C /* ViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +155,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A54A541E1D60B517000E484C /* ViewController.swift in Sources */,
+				A54A54301D60BC7C000E484C /* ViewController.swift in Sources */,
 				A54A541C1D60B517000E484C /* AppDelegate.swift in Sources */,
+				A54A54321D60BC8E000E484C /* UIButton+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
