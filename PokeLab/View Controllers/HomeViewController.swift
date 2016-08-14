@@ -9,6 +9,7 @@
 import UIKit
 
 let pokemons = ["Pikachu", "Togepi", "Psyduck"]
+let selectedIndexKey = "selectedIndex"
 
 class HomeViewController: UIViewController {
 
@@ -23,6 +24,12 @@ class HomeViewController: UIViewController {
     super.viewDidLoad()
 
     buttons = [firstButton, secondButton, thirdButton]
+  }
+
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    let userDefaults = NSUserDefaults.standardUserDefaults()
+    selectedIndex = userDefaults.integerForKey(selectedIndexKey)
     updateButton()
   }
 
@@ -48,7 +55,7 @@ class HomeViewController: UIViewController {
     notification.alertBody = "\(pokemons[selectedIndex]) is nearby."
     notification.fireDate = NSDate(timeIntervalSinceNow: 10)
     notification.soundName = UILocalNotificationDefaultSoundName
-    notification.userInfo = ["selectedIndex": selectedIndex]
+    notification.userInfo = [selectedIndexKey: selectedIndex]
     UIApplication.sharedApplication().scheduleLocalNotification(notification)
   }
 

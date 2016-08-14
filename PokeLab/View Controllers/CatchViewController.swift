@@ -13,15 +13,14 @@ class CatchViewController: UIViewController {
   @IBOutlet weak var pokemonImageView: UIImageView!
   @IBOutlet weak var ballImageView: UIImageView!
 
-  var selectedIndex: Int?
   var originalBallCenter: CGPoint!
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    if let selectedIndex = selectedIndex {
-      pokemonImageView.image = UIImage(named: pokemons[selectedIndex])
-    }
+    let userDefaults = NSUserDefaults.standardUserDefaults()
+    let selectedIndex = userDefaults.integerForKey(selectedIndexKey)
+    pokemonImageView.image = UIImage(named: pokemons[selectedIndex])
   }
 
   @IBAction func onBallPanned(sender: UIPanGestureRecognizer) {
@@ -56,4 +55,9 @@ class CatchViewController: UIViewController {
       break
     }
   }
+
+  @IBAction func onBackButtonTapped(sender: UIButton) {
+    dismissViewControllerAnimated(true, completion: nil)
+  }
+
 }

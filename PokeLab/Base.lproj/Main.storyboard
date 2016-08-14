@@ -117,13 +117,22 @@
                                     <outletCollection property="gestureRecognizers" destination="bHO-tj-mi2" appends="YES" id="qcr-W2-o3f"/>
                                 </connections>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5H-6C-fkQ">
+                                <rect key="frame" x="20" y="20" width="97" height="30"/>
+                                <state key="normal" title="Back to Home"/>
+                                <connections>
+                                    <action selector="onBackButtonTapped:" destination="TQf-oW-SvH" eventType="touchUpInside" id="lEf-HO-zEr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="maL-aU-Khb" firstAttribute="top" secondItem="g4n-Vq-C6w" secondAttribute="bottom" constant="50" id="E15-OZ-bpb"/>
+                            <constraint firstItem="c5H-6C-fkQ" firstAttribute="top" secondItem="NtE-1W-4bp" secondAttribute="bottom" id="FZJ-UI-Z2J"/>
                             <constraint firstItem="g4n-Vq-C6w" firstAttribute="centerX" secondItem="G1Z-u6-Sag" secondAttribute="centerX" id="YsK-Zj-iQ1"/>
                             <constraint firstItem="lxH-IU-WOp" firstAttribute="centerX" secondItem="G1Z-u6-Sag" secondAttribute="centerX" id="nYv-Df-dxs"/>
                             <constraint firstItem="lxH-IU-WOp" firstAttribute="top" secondItem="NtE-1W-4bp" secondAttribute="bottom" constant="100" id="vQ6-bV-ohh"/>
+                            <constraint firstItem="c5H-6C-fkQ" firstAttribute="leading" secondItem="G1Z-u6-Sag" secondAttribute="leading" constant="20" id="w1J-d1-WTN"/>
                         </constraints>
                     </view>
                     <connections>

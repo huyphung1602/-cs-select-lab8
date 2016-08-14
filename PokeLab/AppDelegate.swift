@@ -45,9 +45,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
 
   func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
-    if let selectedIndex = notification.userInfo!["selectedIndex"] as? Int {
+    if let selectedIndex = notification.userInfo![selectedIndexKey] as? Int {
+      let userDefaults = NSUserDefaults.standardUserDefaults()
+      userDefaults.setInteger(selectedIndex, forKey: selectedIndexKey)
+
       if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("CatchViewController") as? CatchViewController {
-        vc.selectedIndex = selectedIndex
         window?.rootViewController?.presentViewController(vc, animated: true, completion: nil)
       }
     }
